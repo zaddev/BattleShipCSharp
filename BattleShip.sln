@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeeslagLib", "ZeeslagLib\ZeeslagLib.csproj", "{0B36D65D-AEBE-4E37-A9EE-8E865F46C4CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeeslagForm", "ZeeslagForm\ZeeslagForm.csproj", "{51A0115A-08F9-4C84-8220-56E242B9770D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B36D65D-AEBE-4E37-A9EE-8E865F46C4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B36D65D-AEBE-4E37-A9EE-8E865F46C4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B36D65D-AEBE-4E37-A9EE-8E865F46C4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B36D65D-AEBE-4E37-A9EE-8E865F46C4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A0115A-08F9-4C84-8220-56E242B9770D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A0115A-08F9-4C84-8220-56E242B9770D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A0115A-08F9-4C84-8220-56E242B9770D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A0115A-08F9-4C84-8220-56E242B9770D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
