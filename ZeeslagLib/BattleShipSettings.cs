@@ -27,12 +27,13 @@ namespace ZeeslagLib
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
                 config.AppSettings.Settings["ConnectionURL"].Value = value;
-                if(OnConnectionURLChange!=null)D:\data barld\Documents\BattleShipCSharp\ZeeslagLib\BattleShipSettings.cs
-                    OnConnectionURLChange(value, new EventArgs());
 
                 //save to apply changes
                 config.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection("appSettings");
+
+                if (OnConnectionURLChange != null)
+                    OnConnectionURLChange(value, new EventArgs());
             }
         }
     }

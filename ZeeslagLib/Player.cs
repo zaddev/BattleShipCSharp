@@ -52,5 +52,16 @@ namespace ZeeslagLib
             {
             }
         }
+
+        public Ship[] OwnShips
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

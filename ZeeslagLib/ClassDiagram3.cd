@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Comment CommentText="zijn flags kan meerdere statusen tegelijk hebben">
-    <Position X="0.99" Y="2.24" Height="0.75" Width="1.7" />
+    <Position X="8.532" Y="0.803" Height="0.75" Width="1.7" />
   </Comment>
   <Class Name="ZeeslagLib.Game">
     <Position X="3.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAABAgAAAAAAAAAAEAAAAAAAQ=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Players" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ZeeslagLib.Board">
     <Position X="8.5" Y="3.25" Width="1.5" />
@@ -20,13 +17,13 @@
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Ships" />
+      <Property Name="BoardFields" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ZeeslagLib.Player">
-    <Position X="4.75" Y="2.5" Width="2" />
+    <Position X="4.75" Y="3.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAQAACCAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAQAAAQAAAAAAAQAACCAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -35,7 +32,12 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ZeeslagLib.BoardField">
-    <Position X="1.25" Y="5.75" Width="1.5" />
+    <Position X="11" Y="4" Width="1.5" />
+    <AssociationLine Name="Ship" Type="ZeeslagLib.Ship">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.086" Y="0.61" Height="0.182" Width="0.603" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>BordField.cs</FileName>
@@ -45,25 +47,29 @@
       <Property Name="Ship" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ZeeslagLib.Ship">
-    <Position X="7.5" Y="5.75" Width="2" />
+  <Class Name="ZeeslagLib.BattleShipSettings">
+    <Position X="1" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAACAAAABAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BattleShipSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZeeslagLib.Ship">
+    <Position X="7.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAQAAAAAAABgAAAAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Direction" />
-    </ShowAsAssociation>
   </Class>
   <Enum Name="ZeeslagLib.BordFieldStatus">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="11" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAIAEAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BordFieldStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ZeeslagLib.Direction">
-    <Position X="10.75" Y="6" Width="1.5" />
+    <Position X="10.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Direction.cs</FileName>
