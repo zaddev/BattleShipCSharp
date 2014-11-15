@@ -51,12 +51,14 @@
             // MainSplitScreen.Panel1
             // 
             this.MainSplitScreen.Panel1.Controls.Add(this.BoardScreens);
+            this.MainSplitScreen.Panel1MinSize = 420;
             // 
             // MainSplitScreen.Panel2
             // 
             this.MainSplitScreen.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.MainSplitScreen.Size = new System.Drawing.Size(885, 499);
-            this.MainSplitScreen.SplitterDistance = 398;
+            this.MainSplitScreen.Panel2MinSize = 20;
+            this.MainSplitScreen.Size = new System.Drawing.Size(918, 522);
+            this.MainSplitScreen.SplitterDistance = 420;
             this.MainSplitScreen.TabIndex = 0;
             // 
             // BoardScreens
@@ -72,8 +74,8 @@
             // BoardScreens.Panel2
             // 
             this.BoardScreens.Panel2.Controls.Add(this.gameBoardUIOpponent);
-            this.BoardScreens.Size = new System.Drawing.Size(885, 398);
-            this.BoardScreens.SplitterDistance = 440;
+            this.BoardScreens.Size = new System.Drawing.Size(918, 420);
+            this.BoardScreens.SplitterDistance = 456;
             this.BoardScreens.TabIndex = 0;
             // 
             // gameBoardUIOwn
@@ -81,8 +83,10 @@
             this.gameBoardUIOwn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameBoardUIOwn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameBoardUIOwn.Location = new System.Drawing.Point(0, 0);
+            this.gameBoardUIOwn.MaximumSize = new System.Drawing.Size(400, 400);
+            this.gameBoardUIOwn.MinimumSize = new System.Drawing.Size(400, 400);
             this.gameBoardUIOwn.Name = "gameBoardUIOwn";
-            this.gameBoardUIOwn.Size = new System.Drawing.Size(440, 398);
+            this.gameBoardUIOwn.Size = new System.Drawing.Size(400, 400);
             this.gameBoardUIOwn.TabIndex = 0;
             // 
             // gameBoardUIOpponent
@@ -90,15 +94,17 @@
             this.gameBoardUIOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameBoardUIOpponent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameBoardUIOpponent.Location = new System.Drawing.Point(0, 0);
+            this.gameBoardUIOpponent.MaximumSize = new System.Drawing.Size(400, 400);
+            this.gameBoardUIOpponent.MinimumSize = new System.Drawing.Size(400, 400);
             this.gameBoardUIOpponent.Name = "gameBoardUIOpponent";
-            this.gameBoardUIOpponent.Size = new System.Drawing.Size(441, 398);
+            this.gameBoardUIOpponent.Size = new System.Drawing.Size(400, 400);
             this.gameBoardUIOpponent.TabIndex = 1;
             // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 499);
+            this.ClientSize = new System.Drawing.Size(918, 522);
             this.Controls.Add(this.MainSplitScreen);
             this.Name = "GameScreen";
             this.Text = "GameScreen";

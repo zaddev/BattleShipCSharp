@@ -47,7 +47,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "name";
+            this.label1.Text = "naam";
             // 
             // label2
             // 
@@ -74,7 +74,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "length";
+            this.label4.Text = "lengte";
             // 
             // label5
             // 
@@ -83,7 +83,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Direction";
+            this.label5.Text = "richting";
             // 
             // textBoxName
             // 
@@ -120,8 +120,8 @@
             this.comboBoxDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDirection.FormattingEnabled = true;
             this.comboBoxDirection.Items.AddRange(new object[] {
-            "Horizontal",
-            "Vertical"});
+            "horizontaal",
+            "verticaal"});
             this.comboBoxDirection.Location = new System.Drawing.Point(109, 99);
             this.comboBoxDirection.Name = "comboBoxDirection";
             this.comboBoxDirection.Size = new System.Drawing.Size(121, 21);
