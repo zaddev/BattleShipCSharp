@@ -57,8 +57,8 @@
             // 
             this.MainSplitScreen.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.MainSplitScreen.Panel2MinSize = 20;
-            this.MainSplitScreen.Size = new System.Drawing.Size(918, 522);
-            this.MainSplitScreen.SplitterDistance = 420;
+            this.MainSplitScreen.Size = new System.Drawing.Size(830, 542);
+            this.MainSplitScreen.SplitterDistance = 436;
             this.MainSplitScreen.TabIndex = 0;
             // 
             // BoardScreens
@@ -74,8 +74,8 @@
             // BoardScreens.Panel2
             // 
             this.BoardScreens.Panel2.Controls.Add(this.gameBoardUIOpponent);
-            this.BoardScreens.Size = new System.Drawing.Size(918, 420);
-            this.BoardScreens.SplitterDistance = 456;
+            this.BoardScreens.Size = new System.Drawing.Size(830, 436);
+            this.BoardScreens.SplitterDistance = 412;
             this.BoardScreens.TabIndex = 0;
             // 
             // gameBoardUIOwn
@@ -104,8 +104,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 522);
+            this.ClientSize = new System.Drawing.Size(830, 542);
             this.Controls.Add(this.MainSplitScreen);
+            this.MinimumSize = new System.Drawing.Size(840, 0);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.MainSplitScreen.Panel1.ResumeLayout(false);

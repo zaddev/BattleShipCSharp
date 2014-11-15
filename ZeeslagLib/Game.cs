@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using Quobject.SocketIoClientDotNet.Client;
+using System.Diagnostics;
 
 namespace ZeeslagLib
 {
@@ -47,7 +48,29 @@ namespace ZeeslagLib
             Ships = array.ToObject<Ship[]>();
 
             if (OnNewShips != null)
+            {
+                //alleen tijdens debug
+                this.shipsSetTestValues(Ships);
+
                 OnNewShips(Ships, new EventArgs());
+            }
+        }
+
+        [ConditionalAttribute("DEBUG")]
+        private void shipsSetTestValues(Ship[] ships)
+        {
+            try
+            {
+                string h = "horizontaal";
+                string v = "verticaal";
+
+                int i = 0;
+                ships[i].position = h;
+                ships[i].x = 0;
+                ships[i].x = 0;
+            }
+            catch (ArgumentOutOfRangeException aore)
+            { }
         }
 
         public bool CloseConnection()
