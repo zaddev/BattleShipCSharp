@@ -38,6 +38,9 @@ namespace ZeeslagForm
             {
                 var p = sender as Panel;
                 p.BackColor = Color.Red;
+
+                var pos = this.tableLayoutPanel1.GetCellPosition(p);
+                Game.Shoot( new int[]{pos.Row, pos.Column});
             }
         }
 
@@ -58,5 +61,7 @@ namespace ZeeslagForm
                 }     
             }
         }
+
+        public ZeeslagLib.Game Game { get; set; }
     }
 }

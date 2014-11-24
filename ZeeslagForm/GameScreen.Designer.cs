@@ -93,7 +93,7 @@
             // gameBoardUIOpponent
             // 
             this.gameBoardUIOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gameBoardUIOpponent.Clickable = true;
+            this.gameBoardUIOpponent.Clickable = false;
             this.gameBoardUIOpponent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameBoardUIOpponent.Location = new System.Drawing.Point(0, 0);
             this.gameBoardUIOpponent.MaximumSize = new System.Drawing.Size(400, 400);

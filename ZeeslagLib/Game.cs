@@ -136,20 +136,55 @@ namespace ZeeslagLib
             if (ships == null)
                 throw new ArgumentNullException("ships");
 
-            socket.On("turn", GameRealStart);
-            socket.On("wait", GameRealStart);
+            socket.On("turn", turn);
+            socket.On("wait", wait);
 
             socket.Emit("setSchepen", JsonConvert.SerializeObject(ships, Formatting.Indented));  
+        }
+
+        public bool IsWait { get { return !Isturn; } }
+
+        private void wait(object obj)
+        {
+            if (!started)
+                GameRealStart();
+        }
+
+        public event EventHandler OnTurn;
+        bool isturn = false;
+        public bool Isturn
+        {
+            get { return isturn; }
+            set
+            {
+                isturn = value;
+                if (OnTurn != null)
+                    OnTurn(null, null);
+            }
+        }
+
+        private void turn(object obj)
+        {
+            Isturn = true;
+
+            if (!started)
+                GameRealStart();
+
         }
 
         public event EventHandler GameStart;
         private bool started = false;
 
-        private void GameRealStart(object obj)
+        private void GameRealStart()
         {
             if (!started)
                 if (GameStart != null)
                     GameStart(null, null);
+        }
+
+        public void Shoot(int[] p)
+        {
+            socket.Emit("setShoot", JsonConvert.SerializeObject(p));
         }
     }
 }
