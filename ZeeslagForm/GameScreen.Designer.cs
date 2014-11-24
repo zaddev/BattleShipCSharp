@@ -75,12 +75,13 @@
             // 
             this.BoardScreens.Panel2.Controls.Add(this.gameBoardUIOpponent);
             this.BoardScreens.Size = new System.Drawing.Size(830, 436);
-            this.BoardScreens.SplitterDistance = 412;
+            this.BoardScreens.SplitterDistance = 411;
             this.BoardScreens.TabIndex = 0;
             // 
             // gameBoardUIOwn
             // 
             this.gameBoardUIOwn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gameBoardUIOwn.Clickable = false;
             this.gameBoardUIOwn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameBoardUIOwn.Location = new System.Drawing.Point(0, 0);
             this.gameBoardUIOwn.MaximumSize = new System.Drawing.Size(400, 400);
@@ -92,6 +93,7 @@
             // gameBoardUIOpponent
             // 
             this.gameBoardUIOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gameBoardUIOpponent.Clickable = true;
             this.gameBoardUIOpponent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameBoardUIOpponent.Location = new System.Drawing.Point(0, 0);
             this.gameBoardUIOpponent.MaximumSize = new System.Drawing.Size(400, 400);
@@ -106,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 542);
             this.Controls.Add(this.MainSplitScreen);
-            this.MinimumSize = new System.Drawing.Size(840, 0);
+            this.MinimumSize = new System.Drawing.Size(840, 38);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.MainSplitScreen.Panel1.ResumeLayout(false);
