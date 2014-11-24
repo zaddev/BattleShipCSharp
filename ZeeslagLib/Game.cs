@@ -66,8 +66,57 @@ namespace ZeeslagLib
 
                 int i = 0;
                 ships[i].position = h;
+                ships[i].x = 4;
+                ships[i].y = 9;
+                i++;
+                ships[i].position = h;
+                ships[i].x = 6;
+                ships[i].y = 0;
+                i++;
+                ships[i].position = v;
                 ships[i].x = 0;
+                ships[i].y = 2;
+                i++;
+                ships[i].position = v;
+                ships[i].x = 3;
+                ships[i].y = 0;
+                i++;
+                ships[i].position = h;
+                ships[i].x = 5;
+                ships[i].y = 2;
+                i++;
+                ships[i].position = v;
+                ships[i].x = 9;
+                ships[i].y = 5;
+                i++;
+                ships[i].position = h;
+                ships[i].x = 2;
+                ships[i].y = 4;
+                i++;
+                ships[i].position = v;
+                ships[i].x = 3;
+                ships[i].y = 6;
+                i++;
+                ships[i].position = h;
                 ships[i].x = 0;
+                ships[i].y = 9;
+                i++;
+                ships[i].position = h;
+                ships[i].x = 0;
+                ships[i].y = 0;
+                i++;
+                ships[i].position = v;
+                ships[i].x = 9;
+                ships[i].y = 2;
+                i++;
+                ships[i].position = v;
+                ships[i].x = 5;
+                ships[i].y = 5;
+                i++;
+                ships[i].position = h;
+                ships[i].x = 0;
+                ships[i].y = 7;
+
             }
             catch (ArgumentOutOfRangeException aore)
             { }
@@ -87,7 +136,20 @@ namespace ZeeslagLib
             if (ships == null)
                 throw new ArgumentNullException("ships");
 
+            socket.On("turn", GameRealStart);
+            socket.On("wait", GameRealStart);
+
             socket.Emit("setSchepen", JsonConvert.SerializeObject(ships, Formatting.Indented));  
+        }
+
+        public event EventHandler GameStart;
+        private bool started = false;
+
+        private void GameRealStart(object obj)
+        {
+            if (!started)
+                if (GameStart != null)
+                    GameStart(null, null);
         }
     }
 }

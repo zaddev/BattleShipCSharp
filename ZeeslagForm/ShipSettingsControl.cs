@@ -42,6 +42,7 @@ namespace ZeeslagForm
             this.textBoxX.Text = ship.x.ToString();
             this.textBoxY.Text = ship.y.ToString();
             this.textBoxLength.Text = ship.afmeting.ToString();
+            this.comboBoxDirection.Text = ship.position;
         }
 
 

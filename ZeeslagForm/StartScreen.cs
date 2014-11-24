@@ -22,7 +22,16 @@ namespace ZeeslagForm
 
             game = new Game();
             game.OnNewShips += game_OnNewShips;
+            game.GameStart += game_GameStart;
             game.StartGame();
+        }
+
+        void game_GameStart(object sender, EventArgs e)
+        {
+            Invoke((MethodInvoker)delegate
+            {
+                new GameScreen(game).Show();
+            });
         }
 
         void game_OnNewShips(object sender, EventArgs e)
