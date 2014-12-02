@@ -177,9 +177,10 @@ namespace ZeeslagLib
 
         private void GameRealStart()
         {
-            if (!started)
-                if (GameStart != null)
-                    GameStart(null, null);
+            if (!started && GameStart != null)
+                GameStart(null, null);
+
+            started = true;
         }
 
         public void Shoot(int[] p)
