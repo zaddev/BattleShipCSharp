@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeeslagLib", "ZeeslagLib\Ze
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeeslagForm", "ZeeslagForm\ZeeslagForm.csproj", "{51A0115A-08F9-4C84-8220-56E242B9770D}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BattleShipJS", "..\BattleShipJS\BattleShipJS.njsproj", "{9251F4E2-9BA1-4368-818E-6053C8070A2D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{51A0115A-08F9-4C84-8220-56E242B9770D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51A0115A-08F9-4C84-8220-56E242B9770D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51A0115A-08F9-4C84-8220-56E242B9770D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9251F4E2-9BA1-4368-818E-6053C8070A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9251F4E2-9BA1-4368-818E-6053C8070A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9251F4E2-9BA1-4368-818E-6053C8070A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9251F4E2-9BA1-4368-818E-6053C8070A2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

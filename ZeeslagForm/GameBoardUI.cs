@@ -31,16 +31,16 @@ namespace ZeeslagForm
                     p.Click += panel_Click;
                 }
         }
+        public Panel lastPanel;
 
         void panel_Click(object sender, EventArgs e)
         {
             if (Clickable)
             {
-                var p = sender as Panel;
-                p.BackColor = Color.Red;
+                lastPanel = sender as Panel;
 
-                var pos = this.tableLayoutPanel1.GetCellPosition(p);
-                Game.Shoot( new int[]{pos.Row, pos.Column});
+                var pos = this.tableLayoutPanel1.GetCellPosition(lastPanel);
+                Game.Shoot(new int[] { pos.Column, pos.Row });
             }
         }
 
@@ -63,5 +63,10 @@ namespace ZeeslagForm
         }
 
         public ZeeslagLib.Game Game { get; set; }
+
+        internal Panel GetPanel(int[] p)
+        {
+            return (Panel)tableLayoutPanel1.GetControlFromPosition(p[1], p[0]);
+        }
     }
 }

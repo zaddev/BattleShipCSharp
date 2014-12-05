@@ -144,8 +144,13 @@ namespace ZeeslagLib
 
         public bool IsWait { get { return !Isturn; } }
 
+        public bool IsMissed { get; private set; }
         private void wait(object obj)
         {
+            if(obj != null)
+                IsMissed = obj.ToString() == "missed";
+            Isturn = false;
+
             if (!started)
                 GameRealStart();
         }
@@ -159,12 +164,16 @@ namespace ZeeslagLib
             {
                 isturn = value;
                 if (OnTurn != null)
-                    OnTurn(null, null);
+                    OnTurn(value, null);
             }
         }
 
+        public int[] OpponentShoot { get; set; }
+
         private void turn(object obj)
         {
+            if(obj != null)
+                OpponentShoot = new int[] { (int)(obj as Newtonsoft.Json.Linq.JArray)[1], (int)(obj as Newtonsoft.Json.Linq.JArray)[0]};
             Isturn = true;
 
             if (!started)

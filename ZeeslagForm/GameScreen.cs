@@ -21,7 +21,27 @@ namespace ZeeslagForm
 
         void game_OnTurn(object sender, EventArgs e)
         {
-            gameBoardUIOpponent.Clickable = true;
+            Invoke((MethodInvoker)delegate
+            {
+                gameBoardUIOpponent.Clickable = (bool)sender;
+
+                if (!(bool)sender)
+                    gameBoardUIOpponent.lastPanel.BackColor = game.IsMissed ? Color.Gray : Color.Red;
+                else
+                {
+                    Panel p = gameBoardUIOwn.GetPanel(game.OpponentShoot);
+                    if (p.BackColor == Color.Black)
+                        p.BackColor = Color.Red;
+                    else
+                        p.BackColor = Color.Gray;
+                }
+
+                label.Text = (bool)sender ? "u bent aan de beurt" : "uw tegenstander is aan de beurt";
+
+
+
+
+            });
         }
 
 
@@ -37,6 +57,8 @@ namespace ZeeslagForm
 
             if (game.Isturn)
                 gameBoardUIOpponent.Clickable = true;
+
+            label.Text = game.Isturn ? "u bent aan de beurt" : "uw tegenstander is aan de beurt";
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

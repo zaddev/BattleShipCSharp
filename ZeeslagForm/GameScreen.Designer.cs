@@ -32,8 +32,10 @@
             this.BoardScreens = new System.Windows.Forms.SplitContainer();
             this.gameBoardUIOwn = new ZeeslagForm.GameBoardUI();
             this.gameBoardUIOpponent = new ZeeslagForm.GameBoardUI();
+            this.label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitScreen)).BeginInit();
             this.MainSplitScreen.Panel1.SuspendLayout();
+            this.MainSplitScreen.Panel2.SuspendLayout();
             this.MainSplitScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoardScreens)).BeginInit();
             this.BoardScreens.Panel1.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // MainSplitScreen.Panel2
             // 
+            this.MainSplitScreen.Panel2.Controls.Add(this.label);
             this.MainSplitScreen.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.MainSplitScreen.Panel2MinSize = 20;
             this.MainSplitScreen.Size = new System.Drawing.Size(830, 542);
@@ -83,6 +86,7 @@
             this.gameBoardUIOwn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameBoardUIOwn.Clickable = false;
             this.gameBoardUIOwn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gameBoardUIOwn.Game = null;
             this.gameBoardUIOwn.Location = new System.Drawing.Point(0, 0);
             this.gameBoardUIOwn.MaximumSize = new System.Drawing.Size(400, 400);
             this.gameBoardUIOwn.MinimumSize = new System.Drawing.Size(400, 400);
@@ -95,12 +99,21 @@
             this.gameBoardUIOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameBoardUIOpponent.Clickable = false;
             this.gameBoardUIOpponent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gameBoardUIOpponent.Game = null;
             this.gameBoardUIOpponent.Location = new System.Drawing.Point(0, 0);
             this.gameBoardUIOpponent.MaximumSize = new System.Drawing.Size(400, 400);
             this.gameBoardUIOpponent.MinimumSize = new System.Drawing.Size(400, 400);
             this.gameBoardUIOpponent.Name = "gameBoardUIOpponent";
             this.gameBoardUIOpponent.Size = new System.Drawing.Size(400, 400);
             this.gameBoardUIOpponent.TabIndex = 1;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(674, 36);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 13);
+            this.label.TabIndex = 0;
             // 
             // GameScreen
             // 
@@ -112,6 +125,8 @@
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.MainSplitScreen.Panel1.ResumeLayout(false);
+            this.MainSplitScreen.Panel2.ResumeLayout(false);
+            this.MainSplitScreen.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitScreen)).EndInit();
             this.MainSplitScreen.ResumeLayout(false);
             this.BoardScreens.Panel1.ResumeLayout(false);
@@ -128,5 +143,6 @@
         private System.Windows.Forms.SplitContainer BoardScreens;
         private GameBoardUI gameBoardUIOwn;
         private GameBoardUI gameBoardUIOpponent;
+        private System.Windows.Forms.Label label;
     }
 }
