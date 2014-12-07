@@ -64,6 +64,12 @@
     <Compile Include="GameBoardUI.Designer.cs">
       <DependentUpon>GameBoardUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameBoardUIDragDrop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameBoardUIDragDrop.Designer.cs">
+      <DependentUpon>GameBoardUIDragDrop.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="GameBoardUI.resx">
       <DependentUpon>GameBoardUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameBoardUIDragDrop.resx">
+      <DependentUpon>GameBoardUIDragDrop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
