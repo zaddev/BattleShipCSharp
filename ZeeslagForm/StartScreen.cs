@@ -64,13 +64,7 @@ namespace ZeeslagForm
 
         private void buttonSaveShip_Click(object sender, EventArgs e)
         {
-            List<Ship> listShips = new List<Ship>();
-            /*foreach(ShipSettingsControl ship in panel1.Controls)
-            {
-                listShips.Add( ship.Ship);
-            }*/
-
-            game.SendShips(listShips.ToArray());
+            game.SendShips(Ships);
         }
 
         private void HorizontaalRadio_CheckedChanged(object sender, EventArgs e)
