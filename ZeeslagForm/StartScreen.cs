@@ -15,6 +15,7 @@ namespace ZeeslagForm
     {
         private Game game;
         Ship[] Ships;
+        int currentShip = 0;
 
         public StartScreen()
         {
@@ -24,6 +25,18 @@ namespace ZeeslagForm
             game.OnNewShips += game_OnNewShips;
             game.GameStart += game_GameStart;
             game.StartGame();
+            gameBoardUIHover1.OnShipSet += gameBoardUIHover1_OnShipSet;
+        }
+
+        void gameBoardUIHover1_OnShipSet(object sender, EventArgs e)
+        {
+            currentShip++;
+            if (currentShip < Ships.Length)
+            {
+                gameBoardUIHover1.ShipToSet = Ships[currentShip];
+                gameBoardUIHover1.ShipToSet.position = "horizontaal";
+                HorizontaalRadio.Checked = true;
+            }
         }
 
         void game_GameStart(object sender, EventArgs e)
@@ -35,21 +48,10 @@ namespace ZeeslagForm
         }
 
         void game_OnNewShips(object sender, EventArgs e)
-        {
-            Ships = sender as Ship[];
-
+        {           
             Invoke((MethodInvoker) delegate {
-
-                int top = 10;
-                foreach (Ship ship in Ships)
-                {
-                    var settings = new ShipSettingsControl(ship);
-                    settings.Top = top;
-                    panel1.Controls.Add(settings);
-                    settings.Show();
-
-                    top += settings.Height + 15;
-                }
+                Ships = sender as Ship[];
+                gameBoardUIHover1.ShipToSet = Ships[currentShip];
             });
             
         }
@@ -63,12 +65,17 @@ namespace ZeeslagForm
         private void buttonSaveShip_Click(object sender, EventArgs e)
         {
             List<Ship> listShips = new List<Ship>();
-            foreach(ShipSettingsControl ship in panel1.Controls)
+            /*foreach(ShipSettingsControl ship in panel1.Controls)
             {
                 listShips.Add( ship.Ship);
-            }
+            }*/
 
             game.SendShips(listShips.ToArray());
+        }
+
+        private void HorizontaalRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            gameBoardUIHover1.ShipToSet.position = HorizontaalRadio.Checked ? "horizontaal" : "verticaal";
         }
     }
 }

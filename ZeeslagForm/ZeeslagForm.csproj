@@ -64,11 +64,11 @@
     <Compile Include="GameBoardUI.Designer.cs">
       <DependentUpon>GameBoardUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameBoardUIDragDrop.cs">
+    <Compile Include="GameBoardUIHover.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GameBoardUIDragDrop.Designer.cs">
-      <DependentUpon>GameBoardUIDragDrop.cs</DependentUpon>
+    <Compile Include="GameBoardUIHover.Designer.cs">
+      <DependentUpon>GameBoardUIHover.cs</DependentUpon>
     </Compile>
     <Compile Include="GameScreen.cs">
       <SubType>Form</SubType>
@@ -99,9 +99,6 @@
     <EmbeddedResource Include="GameBoardUI.resx">
       <DependentUpon>GameBoardUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameBoardUIDragDrop.resx">
-      <DependentUpon>GameBoardUIDragDrop.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,7 +120,9 @@
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,7 +134,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZeeslagLib\ZeeslagLib.csproj">

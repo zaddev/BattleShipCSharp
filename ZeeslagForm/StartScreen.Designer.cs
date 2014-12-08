@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.buttonSettings = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonSaveShip = new System.Windows.Forms.Button();
+            this.HorizontaalRadio = new System.Windows.Forms.RadioButton();
+            this.VerticaalRadio = new System.Windows.Forms.RadioButton();
+            this.gameBoardUIHover1 = new ZeeslagForm.GameBoardUIHover();
             this.SuspendLayout();
             // 
             // buttonSettings
@@ -43,15 +45,6 @@
             this.buttonSettings.UseVisualStyleBackColor = true;
             this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(486, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 565);
-            this.panel1.TabIndex = 1;
-            // 
             // buttonSaveShip
             // 
             this.buttonSaveShip.Location = new System.Drawing.Point(358, 520);
@@ -62,24 +55,64 @@
             this.buttonSaveShip.UseVisualStyleBackColor = true;
             this.buttonSaveShip.Click += new System.EventHandler(this.buttonSaveShip_Click);
             // 
+            // HorizontaalRadio
+            // 
+            this.HorizontaalRadio.AutoSize = true;
+            this.HorizontaalRadio.Location = new System.Drawing.Point(723, 132);
+            this.HorizontaalRadio.Name = "HorizontaalRadio";
+            this.HorizontaalRadio.Size = new System.Drawing.Size(78, 17);
+            this.HorizontaalRadio.TabIndex = 4;
+            this.HorizontaalRadio.TabStop = true;
+            this.HorizontaalRadio.Text = "Horizontaal";
+            this.HorizontaalRadio.UseVisualStyleBackColor = true;
+            this.HorizontaalRadio.CheckedChanged += new System.EventHandler(this.HorizontaalRadio_CheckedChanged);
+            // 
+            // VerticaalRadio
+            // 
+            this.VerticaalRadio.AutoSize = true;
+            this.VerticaalRadio.Location = new System.Drawing.Point(723, 156);
+            this.VerticaalRadio.Name = "VerticaalRadio";
+            this.VerticaalRadio.Size = new System.Drawing.Size(66, 17);
+            this.VerticaalRadio.TabIndex = 5;
+            this.VerticaalRadio.TabStop = true;
+            this.VerticaalRadio.Text = "Verticaal";
+            this.VerticaalRadio.UseVisualStyleBackColor = true;
+            // 
+            // gameBoardUIHover1
+            // 
+            this.gameBoardUIHover1.Clickable = false;
+            this.gameBoardUIHover1.Game = null;
+            this.gameBoardUIHover1.Location = new System.Drawing.Point(223, 47);
+            this.gameBoardUIHover1.MaximumSize = new System.Drawing.Size(400, 400);
+            this.gameBoardUIHover1.MinimumSize = new System.Drawing.Size(400, 400);
+            this.gameBoardUIHover1.Name = "gameBoardUIHover1";
+            this.gameBoardUIHover1.ShipToSet = null;
+            this.gameBoardUIHover1.Size = new System.Drawing.Size(400, 400);
+            this.gameBoardUIHover1.TabIndex = 3;
+            // 
             // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 565);
+            this.ClientSize = new System.Drawing.Size(1076, 565);
+            this.Controls.Add(this.VerticaalRadio);
+            this.Controls.Add(this.HorizontaalRadio);
+            this.Controls.Add(this.gameBoardUIHover1);
             this.Controls.Add(this.buttonSaveShip);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSettings);
             this.Name = "StartScreen";
             this.Text = "StartScreen";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSaveShip;
+        private GameBoardUIHover gameBoardUIHover1;
+        private System.Windows.Forms.RadioButton HorizontaalRadio;
+        private System.Windows.Forms.RadioButton VerticaalRadio;
     }
 }
