@@ -35,8 +35,8 @@ namespace ZeeslagForm
             {
                 PanelsToClear = null;
                 var s = ShipToSet;
-                s.x = tableLayoutPanel1.GetCellPosition(sender as Control).Column;
-                s.y = tableLayoutPanel1.GetCellPosition(sender as Control).Row;
+                s.X = tableLayoutPanel1.GetCellPosition(sender as Control).Column;
+                s.Y = tableLayoutPanel1.GetCellPosition(sender as Control).Row;
                 ShipToSet = null;
                 if (OnShipSet != null)
                     OnShipSet(s, new EventArgs());
@@ -57,9 +57,9 @@ namespace ZeeslagForm
             PanelsToClear = new List<Control>();
 
             var pos = tableLayoutPanel1.GetCellPosition(sender as Control);
-            for(int i=0;i<ShipToSet.afmeting;i++)
+            for(int i=0;i<ShipToSet.Length;i++)
             {
-                if (ShipToSet.position == "horizontaal" && pos.Column + i < 10)
+                if (ShipToSet.Direction == "horizontaal" && pos.Column + i < 10)
                 {
                     var p = tableLayoutPanel1.GetControlFromPosition(pos.Column + i, pos.Row);
                     if (p.BackColor == Color.LawnGreen)
@@ -67,7 +67,7 @@ namespace ZeeslagForm
                         PanelsToClear.Add(p);
                     }
                 }
-                else if (ShipToSet.position == "verticaal" && pos.Row + i < 10)
+                else if (ShipToSet.Direction == "verticaal" && pos.Row + i < 10)
                 {
                     var p = tableLayoutPanel1.GetControlFromPosition(pos.Column, pos.Row + i);
                     if (p.BackColor == Color.LawnGreen)
@@ -77,7 +77,7 @@ namespace ZeeslagForm
                 }
             }
 
-            if (PanelsToClear.Count == ShipToSet.afmeting)
+            if (PanelsToClear.Count == ShipToSet.Length)
                 PanelsToClear.ForEach(c => c.BackColor = Color.Black);
 
 

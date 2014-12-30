@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization;
 
 namespace ZeeslagLib
 {
+    [DataContract]
     public class Ship
     {
-        public int afmeting { get; set; }
-        public string naam { get; set; }
-        public int x { get; set; }
-        public int y { get; set; }
+        [DataMember(Name="afmeting")]
+        public int Length { get; set; }
+        [DataMember(Name = "naam")]
+        public string Name { get; set; }
+        [DataMember(Name = "x")]
+        public int X { get; set; }
+        [DataMember(Name = "y")]
+        public int Y { get; set; }
 
-        public string position { get; set; }
+        [DataMember(Name = "position")]
+        public string Direction { get; set; }
     }
 }

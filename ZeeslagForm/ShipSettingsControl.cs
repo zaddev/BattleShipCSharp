@@ -19,11 +19,11 @@ namespace ZeeslagForm
         {
             get
             {
-                ship.naam = textBoxName.Text;
-                ship.x = int.Parse(textBoxX.Text);
-                ship.y = int.Parse(textBoxY.Text);
+                ship.Name = textBoxName.Text;
+                ship.X = int.Parse(textBoxX.Text);
+                ship.Y = int.Parse(textBoxY.Text);
                 //ship.afmeting = textBoxLength.Text;
-                ship.position = comboBoxDirection.Text;
+                ship.Direction = comboBoxDirection.Text;
 
                 return ship;
             }
@@ -38,11 +38,11 @@ namespace ZeeslagForm
         {
             this.ship = ship;
 
-            this.textBoxName.Text = ship.naam;
-            this.textBoxX.Text = ship.x.ToString();
-            this.textBoxY.Text = ship.y.ToString();
-            this.textBoxLength.Text = ship.afmeting.ToString();
-            this.comboBoxDirection.Text = ship.position;
+            this.textBoxName.Text = ship.Name;
+            this.textBoxX.Text = ship.X.ToString();
+            this.textBoxY.Text = ship.Y.ToString();
+            this.textBoxLength.Text = ship.Length.ToString();
+            this.comboBoxDirection.Text = ship.Direction;
         }
 
 

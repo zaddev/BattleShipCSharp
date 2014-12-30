@@ -34,7 +34,7 @@ namespace ZeeslagForm
             if (currentShip < Ships.Length)
             {
                 gameBoardUIHover1.ShipToSet = Ships[currentShip];
-                gameBoardUIHover1.ShipToSet.position = "horizontaal";
+                gameBoardUIHover1.ShipToSet.Direction = "horizontaal";
                 HorizontaalRadio.Checked = true;
             }
         }
@@ -69,7 +69,7 @@ namespace ZeeslagForm
 
         private void HorizontaalRadio_CheckedChanged(object sender, EventArgs e)
         {
-            gameBoardUIHover1.ShipToSet.position = HorizontaalRadio.Checked ? "horizontaal" : "verticaal";
+            gameBoardUIHover1.ShipToSet.Direction = HorizontaalRadio.Checked ? "horizontaal" : "verticaal";
         }
     }
 }

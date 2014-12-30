@@ -50,13 +50,13 @@ namespace ZeeslagForm
 
             foreach(var ship in ships)
             {
-                for (int i = 0; i < ship.afmeting; i++)
+                for (int i = 0; i < ship.Length; i++)
                 {
                     Panel p;
-                    if (ship.position == "horizontaal")
-                        p = (Panel)tableLayoutPanel1.GetControlFromPosition(ship.x + i, ship.y);
+                    if (ship.Direction == "horizontaal")
+                        p = (Panel)tableLayoutPanel1.GetControlFromPosition(ship.X + i, ship.Y);
                     else
-                        p = (Panel)tableLayoutPanel1.GetControlFromPosition(ship.x, ship.y + i);
+                        p = (Panel)tableLayoutPanel1.GetControlFromPosition(ship.X, ship.Y + i);
                     p.BackColor = Color.Black;
                 }     
             }
