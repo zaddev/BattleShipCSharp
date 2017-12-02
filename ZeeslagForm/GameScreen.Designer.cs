@@ -121,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 542);
             this.Controls.Add(this.MainSplitScreen);
-            this.MinimumSize = new System.Drawing.Size(840, 38);
+            this.MinimumSize = new System.Drawing.Size(840, 39);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.MainSplitScreen.Panel1.ResumeLayout(false);

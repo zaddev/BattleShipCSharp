@@ -163,8 +163,7 @@ namespace ZeeslagLib
             set
             {
                 isturn = value;
-                if (OnTurn != null)
-                    OnTurn(value, null);
+                OnTurn?.Invoke(value, null);
             }
         }
 
