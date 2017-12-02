@@ -186,7 +186,7 @@ namespace ZeeslagLib
         private void GameRealStart()
         {
             if (!started && GameStart != null)
-                GameStart(null, null);
+                GameStart?.Invoke(null, null);
 
             started = true;
         }
